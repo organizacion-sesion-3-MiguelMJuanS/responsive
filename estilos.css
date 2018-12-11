@@ -1,0 +1,126 @@
+/**** tags ****/
+html, body{
+   height: 100%;
+   margin: 0;
+}
+
+header{
+    height: 15%;
+    background-color: azure;
+}
+nav{
+    height: 75%;
+    width: 15%;
+    float: left;
+    background-color: antiquewhite;
+}
+section{
+    height: 75%;
+    width: 80%;
+    float: left;
+    background-color: beige;
+}
+aside{
+    height: 75%;
+    width: 5%;
+    float: right;
+    background-color: burlywood;
+}
+footer{
+    clear: both;
+    height: 10%;
+    background-color: aquamarine;
+}
+
+footer p{
+    height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/**** ids ****/
+#navHoriz{
+    height: 100%;    
+    margin: 0;
+    float: right;
+}
+
+/**** classes ****/
+.logo {
+    font-family: 'Arial Narrow', Impact, sans-serif;
+    font-size: 3em;
+    padding: 10px;
+} 
+.listaHoriz li {
+    list-style-type: none;
+    display: inline;
+}
+.listaVert {
+    list-style-type: none;
+    padding-left: 1em;
+}
+.listaVert li {
+    padding-bottom: 0.2em;
+}
+.listaHoriz{   
+    height: 100%;    
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+.listaHoriz li{   
+    padding: 0.3em;
+}
+
+
+@media only screen and (max-width: 550px) {
+    nav, aside{
+        display: none;    
+    }
+    section{
+        width: 100%;
+    }
+    #navHoriz::after{
+        content: "MENU";
+        font-family: 'Arial Black';
+        font-size: 1.5em;
+        padding-right: 0.5em;
+        height: 100%;  
+        display: flex;
+        align-items: flex-end;
+    }
+    .listaHoriz, .listaVert{
+        display: none;        
+    }
+    .logo::after{
+        content: 'Hasta 550px';
+    }
+
+}
+@media only screen and (min-width: 551px) {
+    
+    .logo:after{
+        content: 'Desde 551px';
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  
+    .logo:after{
+        content: 'Desde 768px';
+    }
+    .logo{
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+     
+    .logo:after{
+        content: 'Desde 1024px';
+    }
+    .logo{
+        font-size: 4em;
+    }
+}
